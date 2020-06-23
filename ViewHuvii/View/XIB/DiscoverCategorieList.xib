@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="148" id="wus-m6-lxh" userLabel="Categorie" customClass="DiscoverCategorieListModel" customModule="ViewHuvii" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="148" id="wus-m6-lxh" userLabel="Categorie" customClass="DiscoverCategoriesModel" customModule="ViewHuvii" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="429" height="148"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wus-m6-lxh" id="mX9-xU-XYJ" userLabel="Categorie">
@@ -38,8 +38,8 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="imageCategorie" destination="Whs-SQ-nuv" id="ROn-pX-w34"/>
-                <outlet property="title" destination="72P-AD-sUA" id="drH-XP-TSZ"/>
+                <outlet property="img" destination="Whs-SQ-nuv" id="PAU-4z-jIc"/>
+                <outlet property="titre" destination="72P-AD-sUA" id="Rlk-Mv-vum"/>
             </connections>
             <point key="canvasLocation" x="219.56521739130437" y="130.58035714285714"/>
         </tableViewCell>

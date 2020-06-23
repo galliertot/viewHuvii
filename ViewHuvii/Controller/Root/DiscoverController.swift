@@ -14,52 +14,31 @@ class DiscoverController: SuperViewController, UITableViewDelegate, UITableViewD
 
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var descriptionDiscover: UILabel!
+
     var menuDiscover = ["Categories", "Collections", "Coaches"]
     var listCategorie = [Categorie] ()
     var listCoach = [Coach] ()
     var listCollection = [Collection] ()
     var selectedRowIndex = -1
-
-    @IBOutlet weak var descriptionDiscover: UILabel!
-    
     var currentDiscover = "Categories"
     var selectedDiscover = ""
     var selectCoach:Coach? = nil
     
+    
+    
+    
     @objc func changDiscover(sender : UIButton) {
-        selectedDiscover = sender.titleLabel?.text as! String
-        let destinationVC = DiscoverController.storyboardInstance(storyboardId: "Main", restorationId: "Discover") as! DiscoverController
-        destinationVC.currentDiscover = selectedDiscover
-        self.navigationController?.pushViewController(destinationVC, animated: false)
-
+        currentDiscover = sender.titleLabel?.text as! String
+        self.viewWillAppear(true)
     }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return listCategorie.count
+    //bug avec Y lors du premier load, pourquoi ?
+    func addBorderBottom(button: UIButton) {
+        let separatorView = UIView.init(frame: CGRect(x: 0, y: button.frame.size.height+3, width: (button.titleLabel?.frame.size.width)!, height: 2))
+            separatorView.backgroundColor = .green
+            separatorView.tag = 100
+            button.addSubview(separatorView)
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch currentDiscover {
-            case "Categories":
-                if listCategorie[section].expanded == true {
-                    return listCategorie[section].workout.count + 1
-                } else {
-                    return 1
-                }
-            case "Collections":
-                return listCollection.count
-            case "Coaches":
-                return listCoach.count
-            default:
-                break
-            
-        }
-        return 0
-    }
-
-    
-    
-
     
     func updateMenuBorder() {
         for i in 0...menuDiscover.count-1 {
@@ -90,15 +69,6 @@ class DiscoverController: SuperViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.titleController = currentDiscover
-        tableView.reloadData()
-        super.viewWillAppear(true)
-
-        
-    }
-    
-    
     func appendArray() {
         listCategorie.append(Categorie(title: "Fitness", image: "categorie_image.jpg", workout: [Workout(title : "Name title", description: "Description", image : "categorie_image.jpg"), Workout(title : "Name tiaatle", description: "Description", image : "categorie_image.jpg"), Workout(title : "Name tiatle", description: "Description", image : "categorie_image.jpg")], expanded : false))
         listCategorie.append(Categorie(title: "Run", image: "categorie_image.jpg",workout: [Workout(title : "Name title", description: "Description", image : "categorie_image.jpg"), Workout(title : "Name tiaatle", description: "Description", image : "categorie_image.jpg"), Workout(title : "Name tiatle", description: "Description", image : "categorie_image.jpg")], expanded : false))
@@ -110,47 +80,92 @@ class DiscoverController: SuperViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        load()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.titleController = currentDiscover
+        updateMenuBorder()
+        tableView.reloadData()
+        super.viewWillAppear(true)
+    }
+    
+
+    func fillCellData(cell : UITableViewCell, indexPath : IndexPath) -> UITableViewCell{
+        if cell.isKind(of: DiscoverCategoriesModel.self) {
+            return fillCategoriesCell(cell : cell as! DiscoverCategoriesModel, indexPath: indexPath)
+        } else if cell.isKind(of: DiscoverCoachesModel.self) {
+            return fillCoachesCell(cell : cell as! DiscoverCoachesModel, indexPath: indexPath)
+        } else if cell.isKind(of: DiscoverCollectionsModel.self) {
+            return fillCollectionsCell(cell : cell as! DiscoverCollectionsModel, indexPath: indexPath)
+        } else {
+            return UITableViewCell()
+        }
+    }
+    
+    func registerNib() {
+        tableView.register(UINib(nibName: "DiscoverCategorieList", bundle: nil), forCellReuseIdentifier: "CellCategories")
+        tableView.register(UINib(nibName: "DiscoverCollectionList", bundle: nil), forCellReuseIdentifier: "CellCollections")
+        tableView.register(UINib(nibName: "DiscoverCoachesList", bundle: nil), forCellReuseIdentifier: "CellCoaches")
+    }
+    
+    func load(){
         super.titleController = currentDiscover
         self.navigationItem.hidesBackButton = true
-        
         fillStackView()
         appendArray()
         updateMenuBorder()
-
+        registerNib()
     }
-
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                let identifier = segue.identifier ?? ""
+    func dequeueCell() -> UITableViewCell{
+        switch currentDiscover {
+            case "Categories" :
+                return tableView.dequeueReusableCell(withIdentifier: "CellCategories") as! DiscoverCategoriesModel
+            case "Coaches" :
+                return tableView.dequeueReusableCell(withIdentifier: "CellCoaches") as! DiscoverCoachesModel
+            case "Collections" :
+                return tableView.dequeueReusableCell(withIdentifier: "CellCollections") as! DiscoverCollectionsModel
+            default:
+                break
+        }
+        return UITableViewCell()
+    }
+    
+    func fillCategoriesCell(cell : DiscoverCategoriesModel, indexPath : IndexPath) -> DiscoverCategoriesModel {
+        if indexPath.row == 0 {
+            cell.titre.text = listCategorie[indexPath.row].title
+            cell.img.image = UIImage(named: listCategorie[indexPath.row].image)
+        } else {
+            cell.titre?.text = listCategorie[indexPath.section].workout[indexPath.row-1].title
+            cell.img?.image = UIImage(named: listCategorie[indexPath.section].workout[indexPath.row-1].image)
+        }
+        return cell
         
-                switch identifier {
-                  case "detailCoach":
-                    guard let vc = segue.destination as? DetailCoach else {
-                      return
-                    }
-                    
-                    vc.coach = selectCoach
-                  default:
-                    break
-                }
-    }
-
-
-    func addBorderBottom(button: UIButton) {
-        let separatorView = UIView.init(frame: CGRect(x: 0, y: button.frame.size.height-10, width: (button.titleLabel?.frame.size.width)!, height: 2))
-            separatorView.backgroundColor = .green
-            separatorView.tag = 100
-            button.addSubview(separatorView)
+        //comment faire pour changer le xib ici ???
     }
     
-    /* func addSeparatorCell(cell : UITableViewCell) {
-        let separatorView = UIView.init(frame: CGRect(x: 0, y: cell.frame.size.height+50, width: cell.frame.size.width - 10, height: 2))
-        separatorView.backgroundColor = .white
-        cell.contentView.addSubview(separatorView)
-    } */
+    func fillCoachesCell(cell : DiscoverCoachesModel, indexPath : IndexPath) -> DiscoverCoachesModel {
+        cell.nom.text = listCoach[indexPath.row].nom
+        cell.img.image = UIImage(named : listCategorie[indexPath.row].image)
+        return cell
+    }
     
+    func fillCollectionsCell(cell : DiscoverCollectionsModel, indexPath : IndexPath) -> DiscoverCollectionsModel {
+        cell.titre.text = listCollection[indexPath.row].title
+        cell.descriptionTitle.text = listCollection[indexPath.row].description
+        cell.img.image = UIImage(named : listCollection[indexPath.row].image)
+        cell.workout.text = String(listCollection[indexPath.row].numberWorkout)
+        return cell
+    }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return listCategorie.count
+    }
     
     func tableView(_ tableView : UITableView, didSelectRowAt indexPath : IndexPath) {
         switch currentDiscover {
@@ -172,67 +187,43 @@ class DiscoverController: SuperViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-    func switchCellValue(cell : DiscoverCategorieListModel, cellForRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch currentDiscover {
             case "Categories":
-                if indexPath.row == 0 {
-                    cell.title?.text = listCategorie[indexPath.section].title
-                    cell.imageCategorie?.image = UIImage(named: listCategorie[indexPath.section].image)
+                if listCategorie[section].expanded == true {
+                    return listCategorie[section].workout.count + 1
                 } else {
-                    cell.titleCollection?.text = listCategorie[indexPath.section].workout[indexPath.row-1].title
-                    cell.imageCollection?.image = UIImage(named: listCategorie[indexPath.section].workout[indexPath.row-1].image)
+                    return 1
                 }
-                 break
             case "Collections":
-                cell.titleCollection?.text = listCollection[indexPath.row].title
-                cell.descriptionCollectionLabel?.text = listCollection[indexPath.row].description
-                cell.imageCollection?.image = UIImage(named: listCollection[indexPath.row].image)
-                cell.numberWorkout?.text = String(listCollection[indexPath.row].numberWorkout)
-                cell.collectionBlackView?.backgroundColor = UIColor(white: 0, alpha: 0.5)
-                 break
+                return listCollection.count
             case "Coaches":
-                cell.nameCoaches?.text = listCoach[indexPath.row].nom
-                cell.imageCoaches?.image = UIImage(named: listCoach[indexPath.row].image)
-                break
+                return listCoach.count
             default:
                 break
             
         }
+        return 0
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       tableView.register(load(indexPath : indexPath.row), forCellReuseIdentifier: "Cell")
-       let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! DiscoverCategorieListModel
+       return fillCellData(cell: dequeueCell(), indexPath: indexPath)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let identifier = segue.identifier ?? ""
 
-       switchCellValue(cell: cell, cellForRowAt: indexPath)
-       return cell
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
-    }
-    
-    func load(indexPath : Int) -> UINib{
-        
-        switch currentDiscover {
-            case "Categories":
-                descriptionDiscover.text = "What do you feel like today ?"
-                if indexPath == 0 {
-                    return UINib(nibName: "DiscoverCategorieList", bundle: nil)
-                } else {
-                    return UINib(nibName: "DiscoverCollectionList", bundle: nil)
-                }
-                // fait bugger l'accordeon en ajoutant le nib collection, probleme d'index je pense
-            case "Collections":
-                descriptionDiscover.text = "Find the collection to guid you reach your goal !"
-                return UINib(nibName: "DiscoverCollectionList", bundle: nil)
-            case "Coaches":
-                descriptionDiscover.text = "What do you feel like today ?"
-                return UINib(nibName: "DiscoverCoachesList", bundle: nil)
-            default:
-                break
+        switch identifier {
+          case "detailCoach":
+            guard let vc = segue.destination as? DetailCoach else {
+              return
+            }
+            
+            vc.coach = selectCoach
+          default:
+            break
         }
-        return UINib()
     }
-
+    
 }
+

@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="134" id="bsI-Kb-mI7" customClass="DiscoverCategorieListModel" customModule="ViewHuvii" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="134" id="bsI-Kb-mI7" customClass="DiscoverCoachesModel" customModule="ViewHuvii" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="134"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bsI-Kb-mI7" id="mek-1c-ArN">
@@ -38,8 +38,8 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="imageCoaches" destination="NWb-r5-aKp" id="gxB-Wg-kaY"/>
-                <outlet property="nameCoaches" destination="WYI-f1-a4o" id="NAQ-5j-8QU"/>
+                <outlet property="img" destination="NWb-r5-aKp" id="k6D-gs-jCW"/>
+                <outlet property="nom" destination="WYI-f1-a4o" id="p9H-FS-Cmg"/>
             </connections>
             <point key="canvasLocation" x="505.79710144927537" y="75"/>
         </tableViewCell>

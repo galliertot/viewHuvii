@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="235" id="1wr-k9-bh3" customClass="DiscoverCategorieListModel" customModule="ViewHuvii" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="235" id="1wr-k9-bh3" customClass="DiscoverCollectionsModel" customModule="ViewHuvii" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="235"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1wr-k9-bh3" id="Maf-j8-Jeu">
@@ -84,11 +84,11 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="collectionBlackView" destination="D19-UG-rbn" id="PIY-Yp-rkC"/>
-                <outlet property="descriptionCollectionLabel" destination="9lo-fh-qw8" id="VlJ-fW-QHR"/>
-                <outlet property="imageCollection" destination="bf6-rd-6pU" id="EiP-ob-bWo"/>
-                <outlet property="numberWorkout" destination="rRm-FE-GeK" id="QHI-CX-8hO"/>
-                <outlet property="titleCollection" destination="1Jv-U0-pHP" id="19A-QS-PY7"/>
+                <outlet property="blackView" destination="D19-UG-rbn" id="92s-aU-jbi"/>
+                <outlet property="descriptionTitle" destination="9lo-fh-qw8" id="6at-7I-Tmx"/>
+                <outlet property="img" destination="bf6-rd-6pU" id="xwe-dV-fiV"/>
+                <outlet property="titre" destination="1Jv-U0-pHP" id="mto-2D-bSH"/>
+                <outlet property="workout" destination="rRm-FE-GeK" id="onV-vq-C3L"/>
             </connections>
             <point key="canvasLocation" x="-8.6956521739130448" y="95.424107142857139"/>
         </tableViewCell>
