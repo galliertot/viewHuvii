@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="248" id="ess-zB-TOL" customClass="DetailCoachCell" customModule="ViewHuvii" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="248"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ess-zB-TOL" id="CD1-45-s3f">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="248"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HtL-Kz-uhF">
+                        <rect key="frame" x="35" y="10" width="344" height="300"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="300" id="cWb-qy-1fV"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0BF-IL-d03">
+                        <rect key="frame" x="35" y="98" width="344" height="139"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbA-5R-SPI">
+                                <rect key="frame" x="40" y="54.5" width="80.5" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IB-rB-9LT">
+                                <rect key="frame" x="40" y="23.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="dbA-5R-SPI" firstAttribute="top" secondItem="4IB-rB-9LT" secondAttribute="bottom" constant="10" id="2L8-CG-nFz"/>
+                            <constraint firstItem="4IB-rB-9LT" firstAttribute="leading" secondItem="0BF-IL-d03" secondAttribute="leading" constant="40" id="Bto-bk-dGR"/>
+                            <constraint firstItem="dbA-5R-SPI" firstAttribute="centerY" secondItem="0BF-IL-d03" secondAttribute="centerY" id="CD0-f6-Byj"/>
+                            <constraint firstItem="dbA-5R-SPI" firstAttribute="leading" secondItem="0BF-IL-d03" secondAttribute="leading" constant="40" id="QYZ-KW-b2H"/>
+                            <constraint firstAttribute="height" constant="150" id="hN8-Cy-nU4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="0BF-IL-d03" firstAttribute="leading" secondItem="CD1-45-s3f" secondAttribute="leading" constant="35" id="CK9-hy-YbO"/>
+                    <constraint firstItem="HtL-Kz-uhF" firstAttribute="top" secondItem="CD1-45-s3f" secondAttribute="top" constant="10" id="Nt2-g8-xfq"/>
+                    <constraint firstAttribute="bottom" secondItem="0BF-IL-d03" secondAttribute="bottom" id="Vj8-8M-X6c"/>
+                    <constraint firstAttribute="trailing" secondItem="HtL-Kz-uhF" secondAttribute="trailing" constant="35" id="VjX-Lz-6mj"/>
+                    <constraint firstAttribute="bottom" secondItem="HtL-Kz-uhF" secondAttribute="bottom" id="crK-Sp-cQu"/>
+                    <constraint firstItem="HtL-Kz-uhF" firstAttribute="leading" secondItem="CD1-45-s3f" secondAttribute="leading" constant="35" id="gBM-F4-ZmE"/>
+                    <constraint firstAttribute="trailing" secondItem="0BF-IL-d03" secondAttribute="trailing" constant="35" id="rcX-iE-Hma"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="blackViewDetailCoachWorkout" destination="0BF-IL-d03" id="WDb-GG-3RU"/>
+                <outlet property="descriptionWorkout" destination="4IB-rB-9LT" id="eG3-d9-Xhe"/>
+                <outlet property="imageWorkout" destination="HtL-Kz-uhF" id="u6Q-0z-kf9"/>
+                <outlet property="titleWorkout" destination="dbA-5R-SPI" id="0Wm-ne-i92"/>
+            </connections>
+            <point key="canvasLocation" x="-333.33333333333337" y="-6.6964285714285712"/>
+        </tableViewCell>
+    </objects>
+</document>

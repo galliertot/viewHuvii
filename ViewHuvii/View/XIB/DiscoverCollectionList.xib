@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="235" id="1wr-k9-bh3" customClass="DiscoverCategorieListModel" customModule="ViewHuvii" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="235"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1wr-k9-bh3" id="Maf-j8-Jeu">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="235"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bf6-rd-6pU">
+                        <rect key="frame" x="15" y="10" width="384" height="250"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="250" id="VSe-lg-TDZ"/>
+                        </constraints>
+                    </imageView>
+                    <view opaque="NO" contentMode="scaleToFill" ambiguous="YES" restorationIdentifier="collectionBlackView" translatesAutoresizingMaskIntoConstraints="NO" id="D19-UG-rbn">
+                        <rect key="frame" x="15" y="106" width="384" height="109"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lo-fh-qw8">
+                                <rect key="frame" x="20" y="10" width="33" height="16"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Jv-U0-pHP">
+                                <rect key="frame" x="20" y="30" width="80.5" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EiJ-Ge-3ec">
+                                <rect key="frame" x="275.5" y="39" width="108.5" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRm-FE-GeK">
+                                        <rect key="frame" x="13" y="18" width="80.5" height="34"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="WORKOUT" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miO-Qn-asu">
+                                        <rect key="frame" x="27" y="41" width="66.5" height="21"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="rRm-FE-GeK" secondAttribute="bottom" constant="30" id="4c5-gc-X21"/>
+                                    <constraint firstAttribute="bottom" secondItem="miO-Qn-asu" secondAttribute="bottom" constant="15" id="asV-x8-wHd"/>
+                                    <constraint firstAttribute="trailing" secondItem="miO-Qn-asu" secondAttribute="trailing" constant="15" id="cSd-Wu-CWX"/>
+                                    <constraint firstAttribute="trailing" secondItem="rRm-FE-GeK" secondAttribute="trailing" constant="15" id="vmD-vy-58y"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="EiJ-Ge-3ec" firstAttribute="leading" secondItem="1Jv-U0-pHP" secondAttribute="trailing" constant="175" id="OEJ-7n-DlX"/>
+                            <constraint firstAttribute="bottom" secondItem="EiJ-Ge-3ec" secondAttribute="bottom" id="gSL-fg-xyN"/>
+                            <constraint firstItem="1Jv-U0-pHP" firstAttribute="top" secondItem="9lo-fh-qw8" secondAttribute="top" constant="20" id="kSw-bV-bPA"/>
+                            <constraint firstAttribute="height" constant="125" id="mKD-L0-MNc"/>
+                            <constraint firstItem="1Jv-U0-pHP" firstAttribute="leading" secondItem="D19-UG-rbn" secondAttribute="leading" constant="20" id="sUX-dJ-oY9"/>
+                            <constraint firstItem="9lo-fh-qw8" firstAttribute="top" secondItem="D19-UG-rbn" secondAttribute="top" constant="10" id="sV3-9Z-24F"/>
+                            <constraint firstAttribute="trailing" secondItem="EiJ-Ge-3ec" secondAttribute="trailing" id="uCM-Sp-LEE"/>
+                            <constraint firstItem="9lo-fh-qw8" firstAttribute="leading" secondItem="D19-UG-rbn" secondAttribute="leading" constant="20" id="zNt-mD-ai9"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="bf6-rd-6pU" secondAttribute="bottom" constant="10" id="2lq-nL-HE3"/>
+                    <constraint firstAttribute="trailing" secondItem="D19-UG-rbn" secondAttribute="trailing" constant="15" id="DjA-TR-Who"/>
+                    <constraint firstAttribute="bottom" secondItem="D19-UG-rbn" secondAttribute="bottom" constant="10" id="Rno-p4-f1c"/>
+                    <constraint firstItem="bf6-rd-6pU" firstAttribute="leading" secondItem="Maf-j8-Jeu" secondAttribute="leading" constant="15" id="XBT-8W-Kig"/>
+                    <constraint firstItem="bf6-rd-6pU" firstAttribute="top" secondItem="Maf-j8-Jeu" secondAttribute="top" constant="10" id="YOz-jy-8aT"/>
+                    <constraint firstAttribute="trailing" secondItem="bf6-rd-6pU" secondAttribute="trailing" constant="15" id="giC-cx-Cve"/>
+                    <constraint firstItem="D19-UG-rbn" firstAttribute="leading" secondItem="Maf-j8-Jeu" secondAttribute="leading" constant="15" id="yHi-ix-rAK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionBlackView" destination="D19-UG-rbn" id="PIY-Yp-rkC"/>
+                <outlet property="descriptionCollectionLabel" destination="9lo-fh-qw8" id="VlJ-fW-QHR"/>
+                <outlet property="imageCollection" destination="bf6-rd-6pU" id="EiP-ob-bWo"/>
+                <outlet property="numberWorkout" destination="rRm-FE-GeK" id="QHI-CX-8hO"/>
+                <outlet property="titleCollection" destination="1Jv-U0-pHP" id="19A-QS-PY7"/>
+            </connections>
+            <point key="canvasLocation" x="-8.6956521739130448" y="95.424107142857139"/>
+        </tableViewCell>
+    </objects>
+</document>
