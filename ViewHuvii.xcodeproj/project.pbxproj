@@ -11,12 +11,12 @@
 		310B6F8824A0AC07001996D0 /* MyResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B6F8724A0AC07001996D0 /* MyResultsController.swift */; };
 		310B6F8A24A0B9DF001996D0 /* DiscoverCategorieList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 310B6F8924A0B9DF001996D0 /* DiscoverCategorieList.xib */; };
 		310B6F8C24A0BAEC001996D0 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B6F8B24A0BAEC001996D0 /* Struct.swift */; };
-		310B6F9124A0D31E001996D0 /* categorie_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 310B6F9024A0D31E001996D0 /* categorie_image.jpg */; };
 		3114267924A0989800E937D6 /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3114267824A0989800E937D6 /* Details.storyboard */; };
 		3114267B24A098B900E937D6 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3114267A24A098B900E937D6 /* Settings.storyboard */; };
 		31328D8D24A2A01500038091 /* DiscoverCategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31328D8C24A2A01500038091 /* DiscoverCategoriesModel.swift */; };
 		31328D8F24A2A02C00038091 /* DiscoverCoachesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31328D8E24A2A02C00038091 /* DiscoverCoachesModel.swift */; };
 		31328D9124A2A03600038091 /* DiscoverCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31328D9024A2A03600038091 /* DiscoverCollectionModel.swift */; };
+		3173091224A33BEA006E83DE /* categorie_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3173091124A33BEA006E83DE /* categorie_image.jpg */; };
 		3174C6C724A1EAAC00DC0801 /* DiscoverCoachesList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3174C6C624A1EAAC00DC0801 /* DiscoverCoachesList.xib */; };
 		3174C6C924A1FB5900DC0801 /* DiscoverCollectionList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3174C6C824A1FB5900DC0801 /* DiscoverCollectionList.xib */; };
 		3174C6CB24A20DED00DC0801 /* DetailCoachWorkOut.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3174C6CA24A20DED00DC0801 /* DetailCoachWorkOut.xib */; };
@@ -38,12 +38,12 @@
 		310B6F8724A0AC07001996D0 /* MyResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResultsController.swift; sourceTree = "<group>"; };
 		310B6F8924A0B9DF001996D0 /* DiscoverCategorieList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverCategorieList.xib; sourceTree = "<group>"; };
 		310B6F8B24A0BAEC001996D0 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
-		310B6F9024A0D31E001996D0 /* categorie_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = categorie_image.jpg; path = ../../../../../Downloads/categorie_image.jpg; sourceTree = "<group>"; };
 		3114267824A0989800E937D6 /* Details.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
 		3114267A24A098B900E937D6 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		31328D8C24A2A01500038091 /* DiscoverCategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCategoriesModel.swift; sourceTree = "<group>"; };
 		31328D8E24A2A02C00038091 /* DiscoverCoachesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverCoachesModel.swift; sourceTree = "<group>"; };
 		31328D9024A2A03600038091 /* DiscoverCollectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverCollectionModel.swift; sourceTree = "<group>"; };
+		3173091124A33BEA006E83DE /* categorie_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = categorie_image.jpg; sourceTree = "<group>"; };
 		3174C6C624A1EAAC00DC0801 /* DiscoverCoachesList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverCoachesList.xib; sourceTree = "<group>"; };
 		3174C6C824A1FB5900DC0801 /* DiscoverCollectionList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverCollectionList.xib; sourceTree = "<group>"; };
 		3174C6CA24A20DED00DC0801 /* DetailCoachWorkOut.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCoachWorkOut.xib; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 		310B6F8F24A0D310001996D0 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				310B6F9024A0D31E001996D0 /* categorie_image.jpg */,
+				3173091124A33BEA006E83DE /* categorie_image.jpg */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -270,8 +270,8 @@
 				319AB7CE24A0900800E7C84C /* LaunchScreen.storyboard in Resources */,
 				3174C6CB24A20DED00DC0801 /* DetailCoachWorkOut.xib in Resources */,
 				3174C6C724A1EAAC00DC0801 /* DiscoverCoachesList.xib in Resources */,
+				3173091224A33BEA006E83DE /* categorie_image.jpg in Resources */,
 				319AB7CB24A0900800E7C84C /* Assets.xcassets in Resources */,
-				310B6F9124A0D31E001996D0 /* categorie_image.jpg in Resources */,
 				319AB7C624A0900600E7C84C /* Main.storyboard in Resources */,
 				3114267924A0989800E937D6 /* Details.storyboard in Resources */,
 				3174C6C924A1FB5900DC0801 /* DiscoverCollectionList.xib in Resources */,
