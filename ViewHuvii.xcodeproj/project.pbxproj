@@ -17,6 +17,9 @@
 		31328D8F24A2A02C00038091 /* DiscoverCoachesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31328D8E24A2A02C00038091 /* DiscoverCoachesModel.swift */; };
 		31328D9124A2A03600038091 /* DiscoverCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31328D9024A2A03600038091 /* DiscoverCollectionModel.swift */; };
 		3173091224A33BEA006E83DE /* categorie_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3173091124A33BEA006E83DE /* categorie_image.jpg */; };
+		3173091524A33F49006E83DE /* BookSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3173091424A33F49006E83DE /* BookSession.swift */; };
+		3173091724A344A5006E83DE /* BookingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3173091624A344A5006E83DE /* BookingsCell.xib */; };
+		3173091924A344B7006E83DE /* BookingsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3173091824A344B7006E83DE /* BookingsCellModel.swift */; };
 		3174C6C724A1EAAC00DC0801 /* DiscoverCoachesList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3174C6C624A1EAAC00DC0801 /* DiscoverCoachesList.xib */; };
 		3174C6C924A1FB5900DC0801 /* DiscoverCollectionList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3174C6C824A1FB5900DC0801 /* DiscoverCollectionList.xib */; };
 		3174C6CB24A20DED00DC0801 /* DetailCoachWorkOut.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3174C6CA24A20DED00DC0801 /* DetailCoachWorkOut.xib */; };
@@ -44,6 +47,9 @@
 		31328D8E24A2A02C00038091 /* DiscoverCoachesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverCoachesModel.swift; sourceTree = "<group>"; };
 		31328D9024A2A03600038091 /* DiscoverCollectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverCollectionModel.swift; sourceTree = "<group>"; };
 		3173091124A33BEA006E83DE /* categorie_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = categorie_image.jpg; sourceTree = "<group>"; };
+		3173091424A33F49006E83DE /* BookSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSession.swift; sourceTree = "<group>"; };
+		3173091624A344A5006E83DE /* BookingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingsCell.xib; sourceTree = "<group>"; };
+		3173091824A344B7006E83DE /* BookingsCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsCellModel.swift; sourceTree = "<group>"; };
 		3174C6C624A1EAAC00DC0801 /* DiscoverCoachesList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverCoachesList.xib; sourceTree = "<group>"; };
 		3174C6C824A1FB5900DC0801 /* DiscoverCollectionList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverCollectionList.xib; sourceTree = "<group>"; };
 		3174C6CA24A20DED00DC0801 /* DetailCoachWorkOut.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCoachWorkOut.xib; sourceTree = "<group>"; };
@@ -79,6 +85,14 @@
 				3173091124A33BEA006E83DE /* categorie_image.jpg */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		3173091324A33F3A006E83DE /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				3173091424A33F49006E83DE /* BookSession.swift */,
+			);
+			path = Action;
 			sourceTree = "<group>";
 		};
 		3174C6D024A2152F00DC0801 /* Detail */ = {
@@ -157,6 +171,7 @@
 				3174C6C624A1EAAC00DC0801 /* DiscoverCoachesList.xib */,
 				3174C6C824A1FB5900DC0801 /* DiscoverCollectionList.xib */,
 				3174C6CA24A20DED00DC0801 /* DetailCoachWorkOut.xib */,
+				3173091624A344A5006E83DE /* BookingsCell.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -168,6 +183,7 @@
 				31328D8C24A2A01500038091 /* DiscoverCategoriesModel.swift */,
 				31328D8E24A2A02C00038091 /* DiscoverCoachesModel.swift */,
 				31328D9024A2A03600038091 /* DiscoverCollectionModel.swift */,
+				3173091824A344B7006E83DE /* BookingsCellModel.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -186,6 +202,7 @@
 		319AB7DC24A092BA00E7C84C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3173091324A33F3A006E83DE /* Action */,
 				3174C6D124A2153500DC0801 /* Root */,
 				3174C6D024A2152F00DC0801 /* Detail */,
 			);
@@ -277,6 +294,7 @@
 				3174C6C924A1FB5900DC0801 /* DiscoverCollectionList.xib in Resources */,
 				310B6F8A24A0B9DF001996D0 /* DiscoverCategorieList.xib in Resources */,
 				3114267B24A098B900E937D6 /* Settings.storyboard in Resources */,
+				3173091724A344A5006E83DE /* BookingsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +311,7 @@
 				310B6F8C24A0BAEC001996D0 /* Struct.swift in Sources */,
 				31328D9124A2A03600038091 /* DiscoverCollectionModel.swift in Sources */,
 				31328D8F24A2A02C00038091 /* DiscoverCoachesModel.swift in Sources */,
+				3173091524A33F49006E83DE /* BookSession.swift in Sources */,
 				3174C6CF24A2152B00DC0801 /* DetailCoach.swift in Sources */,
 				319AB7BD24A0900600E7C84C /* AppDelegate.swift in Sources */,
 				3174C6CD24A2146F00DC0801 /* DetailCoachCell.swift in Sources */,
@@ -301,6 +320,7 @@
 				31328D8D24A2A01500038091 /* DiscoverCategoriesModel.swift in Sources */,
 				310B6F8624A0AA17001996D0 /* SuperViewController.swift in Sources */,
 				319AB7BF24A0900600E7C84C /* SceneDelegate.swift in Sources */,
+				3173091924A344B7006E83DE /* BookingsCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

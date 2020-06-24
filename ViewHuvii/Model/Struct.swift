@@ -35,3 +35,8 @@ struct Workout {
     var description : String
     var image : String
 }
+
+struct Bookings {
+    var title : String
+    var description : String
+}

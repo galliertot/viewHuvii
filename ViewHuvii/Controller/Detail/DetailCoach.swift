@@ -23,10 +23,17 @@ class DetailCoach: SuperViewController, UITableViewDelegate, UITableViewDataSour
         listWorkout.append(Workout(title : "Name title", description: "Description", image : "categorie_image.jpg"))
     }
 
-    func btnRound() {
+    func btnConfig() {
         btnProfile.layer.cornerRadius = 5
         btnProfile.layer.borderWidth = 1
         btnProfile.layer.borderColor = UIColor.green.cgColor
+        
+        btnBookSession.addTarget(self, action: #selector(openBookings), for: .touchUpInside)
+
+    }
+    
+    @objc func openBookings(sender : UIButton) {
+        performSegue(withIdentifier : "openBookings", sender : tableView)
     }
     
     override func viewDidLoad() {
@@ -34,7 +41,7 @@ class DetailCoach: SuperViewController, UITableViewDelegate, UITableViewDataSour
         super.titleController = "Coaches"
         self.navigationItem.title = coach?.nom
         appendArray()
-        btnRound()
+        btnConfig()
         
         
     }
@@ -66,6 +73,21 @@ class DetailCoach: SuperViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let identifier = segue.identifier ?? ""
+
+        switch identifier {
+          case "openBookings":
+            guard let vc = segue.destination as? BookSession else {
+              return
+            }
+            vc.coach = coach
+          default:
+            break
+        }
     }
     
 
