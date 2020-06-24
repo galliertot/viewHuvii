@@ -144,14 +144,17 @@ class DiscoverController: SuperViewController, UITableViewDelegate, UITableViewD
             cell.titre?.text = listCategorie[indexPath.section].workout[indexPath.row-1].title
             cell.img?.image = UIImage(named: listCategorie[indexPath.section].workout[indexPath.row-1].image)
         }
+        self.descriptionDiscover.text = "What do you feel like today ?"
         return cell
         
         //comment faire pour changer le xib ici ???
     }
-    
+
     func fillCoachesCell(cell : DiscoverCoachesModel, indexPath : IndexPath) -> DiscoverCoachesModel {
         cell.nom.text = listCoach[indexPath.row].nom
         cell.img.image = UIImage(named : listCategorie[indexPath.row].image)
+        self.descriptionDiscover.text = ""
+
         return cell
     }
     
@@ -160,6 +163,7 @@ class DiscoverController: SuperViewController, UITableViewDelegate, UITableViewD
         cell.descriptionTitle.text = listCollection[indexPath.row].description
         cell.img.image = UIImage(named : listCollection[indexPath.row].image)
         cell.workout.text = String(listCollection[indexPath.row].numberWorkout)
+        self.descriptionDiscover.text = "Find the collection to guid You reach your goal"
         return cell
     }
     

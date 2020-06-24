@@ -22,7 +22,7 @@ class DetailCoach: SuperViewController, UITableViewDelegate, UITableViewDataSour
     func appendArray() {
         listWorkout.append(Workout(title : "Name title", description: "Description", image : "categorie_image.jpg"))
     }
-    
+
     func btnRound() {
         btnProfile.layer.cornerRadius = 5
         btnProfile.layer.borderWidth = 1
