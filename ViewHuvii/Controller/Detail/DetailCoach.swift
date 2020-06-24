@@ -18,12 +18,7 @@ class DetailCoach: SuperViewController, UITableViewDelegate, UITableViewDataSour
     
     var coach:Coach? = nil
     var workout:Workout? = nil
-    var listWorkout = [Workout] ()
-    
-    func appendArray() {
-        listWorkout.append(Workout(title : "Name title", description: "Description", image : "categorie_image.jpg", minutes: "9"))
-    }
-
+    var listWorkout = appendWorkout()
     func btnConfig() {
         btnProfile.layer.cornerRadius = 5
         btnProfile.layer.borderWidth = 1
@@ -41,7 +36,6 @@ class DetailCoach: SuperViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         super.titleController = "Coaches"
         self.navigationItem.title = coach?.nom
-        appendArray()
         btnConfig()
         
         
@@ -53,7 +47,7 @@ class DetailCoach: SuperViewController, UITableViewDelegate, UITableViewDataSour
     
     func load() -> UINib{
         imageCoach.image = UIImage(named: coach!.image)
-        labelNbWorkout.text = String(coach!.numberWorkout)
+        labelNbWorkout.text = String(getWorkoutByCoach(coach : coach!).count)
         
         return UINib(nibName: "DetailCoachWorkOut", bundle: nil)
     }

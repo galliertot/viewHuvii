@@ -17,9 +17,9 @@ class DiscoverController: SuperViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var descriptionDiscover: UILabel!
 
     var menuDiscover = ["Categories", "Collections", "Coaches"]
-    var listCategorie = [Categorie] ()
-    var listCoach = [Coach] ()
-    var listCollection = [Collection] ()
+    var listCategorie = appendCategorie()
+    var listCoach = appendCoach()
+    var listCollection = appendCollection()
     var selectedRowIndex = -1
     var currentDiscover = "Categories"
     var selectedDiscover = ""
@@ -69,15 +69,6 @@ class DiscoverController: SuperViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-    func appendArray() {
-        listCategorie.append(Categorie(title: "Fitness", image: "categorie_image.jpg", workout: [Workout(title : "Name title", description: "Description", image : "categorie_image.jpg", minutes : "9"), Workout(title : "Name tiaatle", description: "Description", image : "categorie_image.jpg", minutes :"9"), Workout(title : "Name tiatle", description: "Description", image : "categorie_image.jpg", minutes : "9")], expanded : false))
-        listCategorie.append(Categorie(title: "Run", image: "categorie_image.jpg",workout: [Workout(title : "Name title", description: "Description", image : "categorie_image.jpg", minutes : "9"), Workout(title : "Name tiaatle", description: "Description", image : "categorie_image.jpg", minutes : "9"), Workout(title : "Name tiatle", description: "Description", image : "categorie_image.jpg", minutes : "9")], expanded : false))
-        listCoach.append(Coach(nom: "Arthur", image: "categorie_image.jpg", imageProfil: "categorie_image.jpg", numberWorkout: 48, instagram : "@arthur.sene_"))
-        listCoach.append(Coach(nom: "Thomas", image: "categorie_image.jpg", imageProfil: "categorie_image.jpg", numberWorkout: 21, instagram : "@arthur.sene_"))
-        listCollection.append(Collection(title: "Home sweet home", description : "Celebrating French art of living", image: "categorie_image.jpg", numberWorkout: 13))
-        listCollection.append(Collection(title: "Home sweet home", description : "Celebrating French art of living", image: "categorie_image.jpg", numberWorkout: 6))
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         load()
@@ -117,7 +108,6 @@ class DiscoverController: SuperViewController, UITableViewDelegate, UITableViewD
         super.titleController = currentDiscover
         self.navigationItem.hidesBackButton = true
         fillStackView()
-        appendArray()
         updateMenuBorder()
         registerNib()
     }
@@ -162,7 +152,7 @@ class DiscoverController: SuperViewController, UITableViewDelegate, UITableViewD
         cell.titre.text = listCollection[indexPath.row].title
         cell.descriptionTitle.text = listCollection[indexPath.row].description
         cell.img.image = UIImage(named : listCollection[indexPath.row].image)
-        cell.workout.text = String(listCollection[indexPath.row].numberWorkout)
+        cell.workout.text = String(listCollection[indexPath.row].workout.count)
         self.descriptionDiscover.text = "Find the collection to guid You reach your goal"
         return cell
     }

@@ -18,6 +18,8 @@ class DetailWorkout: SuperViewController{
     @IBOutlet weak var minutes: UILabel!
     @IBOutlet weak var titleWorkout: UILabel!
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var titleDescription: UILabel!
+    @IBOutlet weak var longDescription: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +45,8 @@ class DetailWorkout: SuperViewController{
         imageTop.image = UIImage(named: workout!.image)
         minutes.text = workout?.minutes
         titleWorkout.text = workout?.title
+        titleDescription.text = workout?.description
+        longDescription.text = workout?.description
     }
     
     /*
