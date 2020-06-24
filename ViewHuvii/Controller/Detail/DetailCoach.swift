@@ -17,10 +17,11 @@ class DetailCoach: SuperViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var labelNbWorkout: UILabel!
     
     var coach:Coach? = nil
+    var workout:Workout? = nil
     var listWorkout = [Workout] ()
     
     func appendArray() {
-        listWorkout.append(Workout(title : "Name title", description: "Description", image : "categorie_image.jpg"))
+        listWorkout.append(Workout(title : "Name title", description: "Description", image : "categorie_image.jpg", minutes: "9"))
     }
 
     func btnConfig() {
@@ -56,6 +57,11 @@ class DetailCoach: SuperViewController, UITableViewDelegate, UITableViewDataSour
         
         return UINib(nibName: "DetailCoachWorkOut", bundle: nil)
     }
+    func tableView(_ tableView : UITableView, didSelectRowAt indexPath : IndexPath) {
+                self.workout = listWorkout[indexPath.row]
+                performSegue(withIdentifier : "detailWorkout", sender : tableView)
+          
+    }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        tableView.register(load(), forCellReuseIdentifier: "Cell")
@@ -85,6 +91,12 @@ class DetailCoach: SuperViewController, UITableViewDelegate, UITableViewDataSour
               return
             }
             vc.coach = coach
+        case "detailWorkout":
+            guard let vc = segue.destination as? DetailWorkout else {
+              return
+            }
+            vc.coach = coach
+            vc.workout = workout
           default:
             break
         }

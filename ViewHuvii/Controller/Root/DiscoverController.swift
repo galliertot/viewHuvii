@@ -70,10 +70,10 @@ class DiscoverController: SuperViewController, UITableViewDelegate, UITableViewD
     }
     
     func appendArray() {
-        listCategorie.append(Categorie(title: "Fitness", image: "categorie_image.jpg", workout: [Workout(title : "Name title", description: "Description", image : "categorie_image.jpg"), Workout(title : "Name tiaatle", description: "Description", image : "categorie_image.jpg"), Workout(title : "Name tiatle", description: "Description", image : "categorie_image.jpg")], expanded : false))
-        listCategorie.append(Categorie(title: "Run", image: "categorie_image.jpg",workout: [Workout(title : "Name title", description: "Description", image : "categorie_image.jpg"), Workout(title : "Name tiaatle", description: "Description", image : "categorie_image.jpg"), Workout(title : "Name tiatle", description: "Description", image : "categorie_image.jpg")], expanded : false))
-        listCoach.append(Coach(nom: "Arthur", image: "categorie_image.jpg", numberWorkout: 48, instagram : "@arthur.sene_"))
-        listCoach.append(Coach(nom: "Thomas", image: "categorie_image.jpg", numberWorkout: 21, instagram : "@arthur.sene_"))
+        listCategorie.append(Categorie(title: "Fitness", image: "categorie_image.jpg", workout: [Workout(title : "Name title", description: "Description", image : "categorie_image.jpg", minutes : "9"), Workout(title : "Name tiaatle", description: "Description", image : "categorie_image.jpg", minutes :"9"), Workout(title : "Name tiatle", description: "Description", image : "categorie_image.jpg", minutes : "9")], expanded : false))
+        listCategorie.append(Categorie(title: "Run", image: "categorie_image.jpg",workout: [Workout(title : "Name title", description: "Description", image : "categorie_image.jpg", minutes : "9"), Workout(title : "Name tiaatle", description: "Description", image : "categorie_image.jpg", minutes : "9"), Workout(title : "Name tiatle", description: "Description", image : "categorie_image.jpg", minutes : "9")], expanded : false))
+        listCoach.append(Coach(nom: "Arthur", image: "categorie_image.jpg", imageProfil: "categorie_image.jpg", numberWorkout: 48, instagram : "@arthur.sene_"))
+        listCoach.append(Coach(nom: "Thomas", image: "categorie_image.jpg", imageProfil: "categorie_image.jpg", numberWorkout: 21, instagram : "@arthur.sene_"))
         listCollection.append(Collection(title: "Home sweet home", description : "Celebrating French art of living", image: "categorie_image.jpg", numberWorkout: 13))
         listCollection.append(Collection(title: "Home sweet home", description : "Celebrating French art of living", image: "categorie_image.jpg", numberWorkout: 6))
     }

@@ -20,6 +20,7 @@
 		3173091524A33F49006E83DE /* BookSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3173091424A33F49006E83DE /* BookSession.swift */; };
 		3173091724A344A5006E83DE /* BookingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3173091624A344A5006E83DE /* BookingsCell.xib */; };
 		3173091924A344B7006E83DE /* BookingsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3173091824A344B7006E83DE /* BookingsCellModel.swift */; };
+		3173091B24A351FC006E83DE /* DetailWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3173091A24A351FC006E83DE /* DetailWorkout.swift */; };
 		3174C6C724A1EAAC00DC0801 /* DiscoverCoachesList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3174C6C624A1EAAC00DC0801 /* DiscoverCoachesList.xib */; };
 		3174C6C924A1FB5900DC0801 /* DiscoverCollectionList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3174C6C824A1FB5900DC0801 /* DiscoverCollectionList.xib */; };
 		3174C6CB24A20DED00DC0801 /* DetailCoachWorkOut.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3174C6CA24A20DED00DC0801 /* DetailCoachWorkOut.xib */; };
@@ -50,6 +51,7 @@
 		3173091424A33F49006E83DE /* BookSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSession.swift; sourceTree = "<group>"; };
 		3173091624A344A5006E83DE /* BookingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingsCell.xib; sourceTree = "<group>"; };
 		3173091824A344B7006E83DE /* BookingsCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsCellModel.swift; sourceTree = "<group>"; };
+		3173091A24A351FC006E83DE /* DetailWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWorkout.swift; sourceTree = "<group>"; };
 		3174C6C624A1EAAC00DC0801 /* DiscoverCoachesList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverCoachesList.xib; sourceTree = "<group>"; };
 		3174C6C824A1FB5900DC0801 /* DiscoverCollectionList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverCollectionList.xib; sourceTree = "<group>"; };
 		3174C6CA24A20DED00DC0801 /* DetailCoachWorkOut.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCoachWorkOut.xib; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				3174C6CE24A2152B00DC0801 /* DetailCoach.swift */,
+				3173091A24A351FC006E83DE /* DetailWorkout.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				310B6F8624A0AA17001996D0 /* SuperViewController.swift in Sources */,
 				319AB7BF24A0900600E7C84C /* SceneDelegate.swift in Sources */,
 				3173091924A344B7006E83DE /* BookingsCellModel.swift in Sources */,
+				3173091B24A351FC006E83DE /* DetailWorkout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

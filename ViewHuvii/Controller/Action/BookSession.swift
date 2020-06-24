@@ -10,6 +10,7 @@ import UIKit
 
 class BookSession : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     
+    @IBOutlet weak var btnNext: UIButton!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var titre: UILabel!
@@ -22,7 +23,6 @@ class BookSession : UIViewController, UICollectionViewDelegate, UICollectionView
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "BookingsCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
-        
         appendArray()
     }
     

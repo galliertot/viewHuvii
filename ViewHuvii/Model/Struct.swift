@@ -19,6 +19,7 @@ struct Categorie {
 struct Coach {
     var nom : String
     var image : String
+    var imageProfil : String
     var numberWorkout : Int
     var instagram : String
 }
@@ -34,6 +35,7 @@ struct Workout {
     var title : String
     var description : String
     var image : String
+    var minutes : String
 }
 
 struct Bookings {
